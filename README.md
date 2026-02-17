@@ -1,7 +1,7 @@
-# Opus · Task Manager
+#Planify· Task Manager
 
 <p align="center">
-  <img src="banner.png" alt="Opus Task Manager" width="100%" />
+  <img src="banner.png" alt="Planify Task Manager" width="100%" />
 </p>
 
 <p align="center">
@@ -47,10 +47,12 @@
 
 ```
 opus-task-manager/
-│
-├── index.html          # Complete app — single self-contained file
-├── banner.png          # Project banner image
-└── README.md           # You're here
+to-do list-app/
+├── css/
+│   └── custom.css    ← all styles, variables, animations
+├── js/
+│   └── app.js        ← all logic, cleanly commented
+└── index.html        ← pure HTML, links to both files
 ```
 
 > The entire application lives in **one HTML file** — no build tools, no bundlers, no package manager needed.
@@ -60,45 +62,8 @@ opus-task-manager/
 ## ⚡ Getting Started
 
 ### Option 1 — Open directly
+Go to folder to-do list than, 
 Just double-click `index.html` in your file explorer. That's it.
-
-### Option 2 — Serve locally
-```bash
-# Using Python
-python -m http.server 8000
-
-# Using Node.js
-npx serve .
-
-# Using VS Code
-# Install the "Live Server" extension, then right-click index.html → Open with Live Server
-```
-
-Then open `http://localhost:8000` in your browser.
-
-### Option 3 — Deploy instantly
-Drop `index.html` into any of these for instant hosting:
-
-- [**Netlify Drop**](https://app.netlify.com/drop) — drag & drop the file
-- [**GitHub Pages**](https://pages.github.com/) — push to a repo and enable Pages
-- [**Vercel**](https://vercel.com/) — connect your GitHub repo
-
----
-
-## 🎨 Design System
-
-```
-Background     #0f0f0f   Deep charcoal
-Surface        #161616   Panel background
-Card           #1c1c1e   Task cards
-Accent         #c9a84c   Warm amber gold
-Text           #f0ede8   Warm off-white
-Muted          #7a7673   Secondary text
-
-Font (Display) Playfair Display — headings & numbers
-Font (Body)    DM Sans — UI and task text
-```
-
 ---
 
 ## 🖥️ Usage Guide
@@ -119,27 +84,6 @@ Use the **filter bar** to view tasks by:
 
 ### Searching
 Type in the **search box** (top right of the filter bar) to find tasks by keyword in real-time.
-
----
-
-## 🛠️ Customisation
-
-Everything is in one file — open `index.html` in any editor and:
-
-**Change the colour accent** — edit the `--accent` CSS variable at the top:
-```css
-:root {
-  --accent: #c9a84c;   /* swap for any colour you like */
-}
-```
-
-**Add a new category** — add an `<option>` inside `#categoryInput` and a matching CSS badge class:
-```html
-<option value="Health">🏃 Health</option>
-```
-```css
-.badge-health { background: rgba(231,76,60,0.12); color: #e74c3c; }
-```
 
 ---
 
